@@ -42,11 +42,6 @@ print(total_priorities)
 
 # PART 2 OF DAY 3
 
-# STOP = len(rucksacks) - 2
-# for row_index in range(0, STOP):
-#     for letter in row_index:
-#     print(row_index, row_index+1, row_index+2)
-
 total_badge_priorities = 0
 for index in range(0, 100):
     if index <= len(rucksacks)-3:
