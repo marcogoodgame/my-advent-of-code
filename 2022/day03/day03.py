@@ -10,7 +10,7 @@ with open("input.txt", "r") as f:
     rucksacks = f.read().splitlines()
 f.close()
 
-# creation of an array where a = 1, b = 2, etc.
+# creation of a dictionary where a = 1, b = 2, etc.
 items_priorities = {}
 count = 1
 for letter in string.ascii_lowercase:
@@ -28,9 +28,6 @@ for rucksack in rucksacks:
     half_len = int(items/2)
     first_half = rucksack[:half_len]
     second_half = rucksack[half_len:]
-    combination = first_half + second_half
-    # print(combination == rucksack)
-    # the concation of the two partial strings is the same as the original
     item_double = ""
     for letter in first_half:
         if letter in second_half:
@@ -43,7 +40,7 @@ print(total_priorities)
 # PART 2 OF DAY 3
 
 total_badge_priorities = 0
-for index in range(0, 100):
+for index in range(0, int(len(rucksacks)/3)):
     if index <= len(rucksacks)-3:
         first_row = rucksacks[index * 3]
         second_row = rucksacks[index * 3 + 1]
